@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for cat in site.categories %}
+    <h1><a href="{{ site.baseurl }}/{{ cat | first }}">{{ cat | first }}</a></h1>
+    {% for post in cat[1] %}
+      <article class="post">
+        <ul>
+          <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        </ul>
+      </article>
+    {% endfor %}
+  {% endfor %}
+</div>
