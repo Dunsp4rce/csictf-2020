@@ -15,8 +15,12 @@ https://ctf.csivit.com/files/26679530ae48abdd115d63afbb110aa7/sky.jpg?token=eyJ1
 The **strings** command in linux returns each **string** of printable characters in a file. 
 
 So we use the strings command on the jpg file,
-```strings sky.jpg```
+```
+strings sky.jpg
+```
 
 It produces a bunch of strings, in the bottom of the list we find the flag.
 ## Flag
-```csictf{j0ker_w4snt_happy}```
+```
+csictf{j0ker_w4snt_happy}
+```
