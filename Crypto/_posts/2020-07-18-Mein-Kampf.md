@@ -2,6 +2,7 @@
 layout: post
 title: "Mein Kampf"
 author: "raghul-rajasekar"
+tags: ['Crypto']
 ---
 
 "We have intercepted the enemy's communications, but unfortunately, some data was corrupted during transmission. Can you recover the message?" M4 UKW $ Gamma 2 4 $ 5 9 $ 14 3 $ 5 20 fv cd hu ik es op yl wq jm
@@ -36,5 +37,6 @@ The output is `CSICTFNOSHITSHERLOCK I IV VII B-Thin`.
 
 ## Flag
 
-`csictf{no_shit_sherlock}`
-
+```
+csictf{no_shit_sherlock}
+```
