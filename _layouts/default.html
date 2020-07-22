@@ -14,14 +14,14 @@
     <header>
       <div class="container" style="min-height: 100px; overflow: hidden;">
         <div style="float: left;">
-          <a id="a-title" href="{{ '/' | relative_url }}">
+          <a id="a-title">
             <h1>{{ site.title | default: site.github.repository_name }}</h1>
           </a>
           <h2>{{ site.description | default: site.github.project_tagline }}</h2>
 
           <section id="downloads">
-            <a href="https://dunsp4rce.github.io/" class="btn"><span class="icon"></span>Home</a>
-            <a href="{{ site.baseurl }}" class="btn"><span class="icon"></span>Other writeups of {{ site.title | default: site.github.repository_name }}</a>
+            <a href="https://dunsp4rce.github.io/" class="btn"><span class="icon" style="opacity: 0.6;background: url('https://dunsp4rce.github.io/Dunsp4rce.png') 0 0 no-repeat;background-size: 16px 16px;"></span>Home</a>
+            <a href="{{ site.baseurl }}" class="btn">{{ site.title | default: site.github.repository_name }} Writeups Home</a>
           </section>
         </div>
         <img align="right" src="https://dunsp4rce.github.io/Dunsp4rce.png" style="max-width: 100px; height: auto;" />
