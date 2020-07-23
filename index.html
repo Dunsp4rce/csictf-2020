@@ -4,11 +4,11 @@ layout: default
 
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <style type="text/css">
-    .grid-item { width: min-content; white-space: nowrap;}
+    .grid-item { width: min-content; white-space: nowrap;border: solid #292929;margin: 5px 5px;padding: 8px}
   </style>
-<div class="posts grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+<div class="posts grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
   {% for cat in site.categories %}
-    <div class='.grid-item'>
+    <div class='grid-item'>
       <h1><a href="{{ site.baseurl }}/{{ cat | first }}">{{ cat | first }}</a></h1>
       {% for post in cat[1] %}
         <article class="post">
