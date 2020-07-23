@@ -2,15 +2,21 @@
 layout: default
 ---
 
-<div class="posts">
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<style type="text/css">
+    .grid-item { width: min-content; white-space: nowrap;}
+  </style>
+<div class="posts grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300 }'>
   {% for cat in site.categories %}
-    <h1><a href="{{ site.baseurl }}/{{ cat | first }}">{{ cat | first }}</a></h1>
-    {% for post in cat[1] %}
-      <article class="post">
-        <ul>
-          <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-        </ul>
-      </article>
-    {% endfor %}
+    <div class='.grid-item'>
+      <h1><a href="{{ site.baseurl }}/{{ cat | first }}">{{ cat | first }}</a></h1>
+      {% for post in cat[1] %}
+        <article class="post">
+          <ul>
+            <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+          </ul>
+        </article>
+      {% endfor %}
+    </div>
   {% endfor %}
 </div>
